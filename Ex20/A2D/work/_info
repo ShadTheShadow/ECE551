@@ -1,0 +1,141 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vA2D_Intf
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1794413587
+!i10b 1
+!s100 CVg@9=`;RJK596f1?41`F1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IAfN<?iIcLX@3KaQboYN^z0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z3 dC:/Users/evant/ECE551/Ex20/A2D
+w1794413583
+8C:/Users/evant/ECE551/Ex20/A2D/A2D_Intf.sv
+FC:/Users/evant/ECE551/Ex20/A2D/A2D_Intf.sv
+!i122 4
+L0 1 93
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1794413587.000000
+!s107 C:/Users/evant/ECE551/Ex20/A2D/A2D_Intf.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/evant/ECE551/Ex20/A2D/A2D_Intf.sv|
+!i113 1
+Z5 o-work work -sv
+Z6 tCvgOpt 0
+n@a2@d_@intf
+vA2D_test
+R0
+!s110 1794413173
+!i10b 1
+!s100 FZ;QV6S62d0V[oY4LS0Tf3
+R1
+I__D:^C_6@SBfA<DJ@Wl=>0
+R2
+S1
+R3
+Z7 w1794244058
+8C:/Users/evant/ECE551/Ex20/A2D/A2D_test.sv
+FC:/Users/evant/ECE551/Ex20/A2D/A2D_test.sv
+!i122 0
+L0 1 54
+R4
+r1
+!s85 0
+31
+Z8 !s108 1794413173.000000
+!s107 C:/Users/evant/ECE551/Ex20/A2D/A2D_test.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/evant/ECE551/Ex20/A2D/A2D_test.sv|
+!i113 1
+R5
+R6
+n@a2@d_test
+vADC128S
+R0
+Z9 !s110 1794413174
+!i10b 1
+!s100 McKX3EF4NNkV4SfEeX1_m3
+R1
+I3WcPFN[`dF:i4;E3W@XJ73
+R2
+S1
+R3
+R7
+8C:/Users/evant/ECE551/Ex20/A2D/ADC128S.sv
+FC:/Users/evant/ECE551/Ex20/A2D/ADC128S.sv
+!i122 1
+L0 1 108
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/evant/ECE551/Ex20/A2D/ADC128S.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/evant/ECE551/Ex20/A2D/ADC128S.sv|
+!i113 1
+R5
+R6
+n@a@d@c128@s
+vSPI_ADC128S
+R0
+R9
+!i10b 1
+!s100 93oj0i;UV@::cHMPGHMJ>1
+R1
+IGM1d1b[S5cfUHSj7Y7i3i2
+R2
+S1
+R3
+R7
+8C:/Users/evant/ECE551/Ex20/A2D/SPI_ADC128S.sv
+FC:/Users/evant/ECE551/Ex20/A2D/SPI_ADC128S.sv
+!i122 2
+L0 1 140
+R4
+r1
+!s85 0
+31
+Z10 !s108 1794413174.000000
+!s107 C:/Users/evant/ECE551/Ex20/A2D/SPI_ADC128S.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/evant/ECE551/Ex20/A2D/SPI_ADC128S.sv|
+!i113 1
+R5
+R6
+n@s@p@i_@a@d@c128@s
+vSPI_main
+R0
+R9
+!i10b 1
+!s100 cQ9ZL`YYYX6b=Rk9]9kBm3
+R1
+ILkWPgNGNG?l3HlVFKK2bg3
+R2
+S1
+R3
+R7
+8C:/Users/evant/ECE551/Ex20/A2D/SPI_main.sv
+FC:/Users/evant/ECE551/Ex20/A2D/SPI_main.sv
+!i122 3
+L0 1 286
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/evant/ECE551/Ex20/A2D/SPI_main.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/evant/ECE551/Ex20/A2D/SPI_main.sv|
+!i113 1
+R5
+R6
+n@s@p@i_main
