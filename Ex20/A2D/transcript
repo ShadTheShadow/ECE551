@@ -1,11 +1,5 @@
-# Compile of A2D_Intf.sv failed with 10 errors.
-# Compile of A2D_tb.sv was successful.
-# Compile of A2D_test.sv was successful.
-# Compile of ADC128S.sv was successful.
-# Compile of SPI_ADC128S.sv was successful.
-# Compile of SPI_main.sv was successful.
-# 6 compiles, 1 failed with 10 errors.
-# Compile of A2D_Intf.sv failed with 7 errors.
-# Compile of A2D_Intf.sv failed with 6 errors.
+# Compile of A2D_Intf.sv failed with 2 errors.
 # Compile of A2D_Intf.sv failed with 4 errors.
+# Compile of A2D_Intf.sv failed with 16 errors.
+# Compile of A2D_Intf.sv failed with 8 errors.
 # Compile of A2D_Intf.sv was successful.

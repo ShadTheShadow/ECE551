@@ -1,10 +1,10 @@
 module A2D_Intf(
     input clk,
     input rst_n,
-    output lft_ld[11:0],
-    output rght_ld[11:0],
-    output steer_pot[11:0],
-    output batt[11:0],
+    output reg [11:0] lft_ld,
+    output reg [11:0] rght_ld,
+    output reg [11:0] steer_pot,
+    output reg [11:0] batt,
     output SS_n,
     output SCLK,
     output MOSI,
@@ -84,15 +84,8 @@ module A2D_Intf(
         end
 
         //wt_data bus -> SPI
-        wt_data = {2'b00,channel[2:0],11'h00}
+        wt_data = {2'b00,channel[2:0],11'h00};
     end
-
-
-
-    logic [11:0] lft_ld;
-    logic [11:0] rght_ld;
-    logic [11:0] steer_pot;
-    logic [11:0] batt;
 
 
     always_ff @(posedge clk) begin
