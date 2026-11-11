@@ -11,7 +11,11 @@ module A2D_Intf(
     input MISO
 );
 
+    //SPI signals
     logic [15:0] wt_data;
+
+    //FSM signals
+    logic update;
 
 
 
@@ -22,7 +26,7 @@ module A2D_Intf(
     //Channel 6: 2'b11
     logic [1:0] robin_cnt;
 
-    always_ff(@posedge clk) begin
+    always_ff @(posedge clk) begin
         if (!rst_n) begin
             robin_cnt <= 2'b00;
         end
@@ -40,7 +44,10 @@ module A2D_Intf(
 
 
     //Channel combinational logic
-    logic lft_ld_en, rght_ld_en, steer_pot_en, batt_en;
+    logic lft_ld_en;
+    logic rght_ld_en;
+    logic steer_pot_en;
+    logic batt_en;
     logic [2:0] channel;
 
     always_comb begin
@@ -55,18 +62,22 @@ module A2D_Intf(
         if (update) begin
 
             case(robin_cnt)
-                2'b00:
+                2'b00: begin
                     channel = 3'b000;
                     lft_ld_en = 1'b1;
-                2'b01:
+                end
+                2'b01: begin
                     channel = 3'b100;
                     rght_ld_en = 1'b1;
-                2'b10:
+                end
+                2'b10: begin
                     channel = 3'b101;
                     steer_pot_en = 1'b1;
-                2'b11:
+                end
+                2'b11: begin
                     channel = 3'b110;
                     batt_en = 1'b1;
+                end
             endcase
         end
 
