@@ -1,32 +1,36 @@
-C:/Users/evant/ECE551/Ex20/A2D/A2D_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/evant/ECE551/Ex20/A2D/A2D_tb.sv
+C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_Intf.sv {1 {vlog -work work -sv -stats=none C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_Intf.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-
-} {} {}} C:/Users/evant/ECE551/Ex20/A2D/SPI_main.sv {1 {vlog -work work -sv -stats=none C:/Users/evant/ECE551/Ex20/A2D/SPI_main.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module SPI_main
+-- Compiling module A2D_Intf
 
 Top level modules:
-	SPI_main
+	A2D_Intf
 
-} {} {}} C:/Users/evant/ECE551/Ex20/A2D/SPI_ADC128S.sv {1 {vlog -work work -sv -stats=none C:/Users/evant/ECE551/Ex20/A2D/SPI_ADC128S.sv
+} {} {}} C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module A2D_tb
+
+Top level modules:
+	A2D_tb
+
+} {} {}} C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/SPI_ADC128S.sv {1 {vlog -work work -sv -stats=none C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/SPI_ADC128S.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module SPI_ADC128S
 
 Top level modules:
 	SPI_ADC128S
 
-} {} {}} C:/Users/evant/ECE551/Ex20/A2D/A2D_test.sv {1 {vlog -work work -sv -stats=none C:/Users/evant/ECE551/Ex20/A2D/A2D_test.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module A2D_test
-
-Top level modules:
-	A2D_test
-
-} {} {}} C:/Users/evant/ECE551/Ex20/A2D/ADC128S.sv {1 {vlog -work work -sv -stats=none C:/Users/evant/ECE551/Ex20/A2D/ADC128S.sv
+} {} {}} C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/ADC128S.sv {1 {vlog -work work -sv -stats=none C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/ADC128S.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module ADC128S
 
 Top level modules:
 	ADC128S
+
+} {} {}} C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_test.sv {1 {vlog -work work -sv -stats=none C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_test.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module A2D_test
+
+Top level modules:
+	A2D_test
 
 } {} {}}

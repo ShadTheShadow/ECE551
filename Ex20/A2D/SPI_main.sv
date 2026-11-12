@@ -26,7 +26,6 @@ logic MISO_smpl, MISO_smpl_nxt, init;
 logic [15:0] shft_reg, shft_reg_nxt;
 
 // Front Porch
-logic shft_imm_negedge, shft_imm_old;
 logic [1:0] SCLK_cnt;
 logic fr_porch;
 
