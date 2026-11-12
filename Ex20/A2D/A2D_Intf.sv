@@ -1,6 +1,7 @@
 module A2D_Intf(
     input clk,
     input rst_n,
+    input nxt,
     output reg [11:0] lft_ld,
     output reg [11:0] rght_ld,
     output reg [11:0] steer_pot,
@@ -12,8 +13,24 @@ module A2D_Intf(
 );
 
     //SPI signals
-    logic [15:0] wt_data;
-    logic [15:0] rd_data;
+    logic [15:0] wt_data, rd_data;
+    logic MISO, wrt;                        // Input signals
+    logic spi_done, spi_ss_n, SCLK, MOSI;   // Output signals
+
+    // SPI Instance
+    SPI_main SPI(
+        .clk(clk),
+        .rst_n(rst_n),
+        .MISO(MISO),
+        .wrt(wrt),
+        .wrt_data(wt_data),
+
+        .done(spi_done),
+        .SS_n(spi_ss_n),
+        .SCLK(SCLK),
+        .MOSI(MOSI),
+        .rd_data(rd_data)
+    );
 
     //FSM signals
     logic update;
@@ -106,23 +123,54 @@ module A2D_Intf(
         end
     end
 
+    // FSM Definition 😊
+
+    enum {IDLE, CHANNEL, READ} state_t;
+
+    state_t state, nxt_state;
+
+    // State Machine Register
     always_ff @(posedge clk) begin
-        if (!rst_n) begin
-            steer_pot <= 11'd0;
+
+        if (~rst_n) begin
+
+            state <= IDLE;
+
+        end else begin
+
+            state <= nxt_state;
+
         end
-        else if (steer_pot_en) begin
-            steer_pot <= rd_data[11:0];
-        end
+
     end
 
-    always_ff @(posedge clk) begin
-        if (!rst_n) begin
-            batt <= 11'd0;
-        end
-        else if (batt_en) begin
-            batt <= rd_data[11:0];
-        end
-    end
+    logic update;
 
+    // State Machine Next State
+    always_comb begin
+
+        update = 0;
+
+        case (state)
+
+            IDLE: begin
+
+
+
+            end
+
+            CHANNEL: begin
+
+
+
+            end
+
+            READ: begin
+
+            end
+
+        endcase
+
+    end
 
 endmodule

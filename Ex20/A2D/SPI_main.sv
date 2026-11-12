@@ -1,13 +1,14 @@
 module SPI_main(
     input   logic clk,
     input   logic rst_n,
-    output  logic SS_n,
-    output  logic SCLK,
-    output  logic MOSI,
     input   logic MISO,
     input   logic wrt,
     input   logic [15:0] wrt_data,
+    
     output  logic done,
+    output  logic SS_n,
+    output  logic SCLK,
+    output  logic MOSI,
     output  logic [15:0] rd_data
 );
 
