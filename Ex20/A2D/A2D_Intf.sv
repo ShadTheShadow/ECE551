@@ -1,10 +1,10 @@
 module A2D_Intf(
     input clk,
     input rst_n,
-    output lft_ld[11:0],
-    output rght_ld[11:0],
-    output steer_pot[11:0],
-    output batt[11:0],
+    output reg [11:0] lft_ld,
+    output reg [11:0] rght_ld,
+    output reg [11:0] steer_pot,
+    output reg [11:0] batt,
     output SS_n,
     output SCLK,
     output MOSI,
@@ -13,9 +13,11 @@ module A2D_Intf(
 
     //SPI signals
     logic [15:0] wt_data;
+    logic [15:0] rd_data;
 
     //FSM signals
     logic update;
+    logic done;
 
 
 
@@ -81,13 +83,46 @@ module A2D_Intf(
             endcase
         end
 
-        //Create wt_data bus TODO: Not finished
-        wt_data[13:11] = channel;
+        //wt_data bus -> SPI
+        wt_data = {2'b00,channel[2:0],11'h00};
     end
 
 
-    //TODO: How to get rd_data?
+    always_ff @(posedge clk) begin
+        if (!rst_n) begin
+            lft_ld <= 11'd0;
+        end
+        else if (lft_ld_en) begin
+            lft_ld <= rd_data[11:0];
+        end
+    end
 
+    always_ff @(posedge clk) begin
+        if (!rst_n) begin
+            rght_ld <= 11'd0;
+        end
+        else if (rght_ld_en) begin
+            rght_ld <= rd_data[11:0];
+        end
+    end
+
+    always_ff @(posedge clk) begin
+        if (!rst_n) begin
+            steer_pot <= 11'd0;
+        end
+        else if (steer_pot_en) begin
+            steer_pot <= rd_data[11:0];
+        end
+    end
+
+    always_ff @(posedge clk) begin
+        if (!rst_n) begin
+            batt <= 11'd0;
+        end
+        else if (batt_en) begin
+            batt <= rd_data[11:0];
+        end
+    end
 
 
 endmodule
