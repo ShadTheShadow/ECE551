@@ -1,0 +1,70 @@
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.piezo_drv_tb
+# vsim -gui work.piezo_drv_tb 
+# Start time: 10:09:52 on Nov 06,2026
+# Loading sv_std.std
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+add wave -position insertpoint sim:/piezo_drv_tb/iDUT/*
+run -all
+# Compile of piezo_drv.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv
+run -all
+restart -f
+run -all
+# Compile of piezo_drv_tb.sv failed with 2 errors.
+# Compile of piezo_drv_tb.sv failed with 2 errors.
+# Compile of piezo_drv_tb.sv failed with 2 errors.
+# Compile of piezo_drv_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+run -all
+# Compile of piezo_drv_tb.sv failed with 1 errors.
+# Compile of piezo_drv_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+run -all
+# Compile of piezo_drv.sv failed with 1 errors.
+# Compile of piezo_drv_tb.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of piezo_drv.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# Compile of piezo_drv_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+run -all
+restart -f
+run -all
+# Compile of piezo_drv_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+run -all
+# Compile of piezo_drv.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv
+# ** Error: (vsim-3063) Port 'rst_n' not found in the connected module (5th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /piezo_drv_tb/iDUT File: C:/Users/evant/Documents/ECE551/Ex19/piezo_drv_tb.sv Line: 11
+# End time: 11:01:46 on Nov 06,2026, Elapsed time: 0:51:54
+# Errors: 1, Warnings: 1
