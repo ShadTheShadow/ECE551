@@ -1,4 +1,11 @@
 
+State Machine - |A2D_test|A2D_Intf:iDUT|state
+Name state.READ state.BUFF state.CHANNEL state.IDLE 
+state.IDLE 0 0 0 0 
+state.CHANNEL 0 0 1 1 
+state.BUFF 0 1 0 1 
+state.READ 1 0 0 1 
+
 State Machine - |A2D_test|A2D_Intf:iDUT|SPI_main:SPI|state
 Name state.WAIT state.TRANSMIT state.INIT 
 state.WAIT 0 0 0 

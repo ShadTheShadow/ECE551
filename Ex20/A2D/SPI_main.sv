@@ -27,7 +27,6 @@ logic [15:0] shft_reg, shft_reg_nxt;
 
 // Front Porch
 logic [1:0] SCLK_cnt;
-logic fr_porch;
 
 // Bit Counter:
 logic [3:0] bit_ctr, bit_ctr_nxt;
@@ -68,9 +67,6 @@ always_ff @(posedge clk) begin
     // else keep value
 
 end
-
-// Front porch after 2 cycles of sh_imm (also sclk)
-assign fr_porch = ~(SCLK_cnt == 2'b1);
 
 // Decode SCLK_div //
 

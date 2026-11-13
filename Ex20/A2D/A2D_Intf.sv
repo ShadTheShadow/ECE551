@@ -133,7 +133,12 @@ module A2D_Intf(
 
     // FSM Definition 😊
 
-    typedef enum {IDLE, CHANNEL, BUFF, READ} state_t;
+    typedef enum logic [1:0] {
+        IDLE, 
+        CHANNEL, 
+        BUFF, 
+        READ
+        } state_t;
 
     state_t state, nxt_state;
 
@@ -158,6 +163,7 @@ module A2D_Intf(
         // Zero, prevent latch
         update = 0;     // Update registers
         wrt = 0;        // Write SPI
+        nxt_state = IDLE;
 
         case (state)
 
