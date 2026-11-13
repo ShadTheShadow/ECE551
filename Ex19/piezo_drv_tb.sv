@@ -26,20 +26,48 @@ initial begin
     @(posedge clk);
 
     rst_n = 1;
-    // batt_low = 0;
-    // too_fast = 0;
-    // en_steer = 1;
-
-
     batt_low = 1;
+    too_fast = 1;
+    en_steer = 1;
+
+    #1000000;
+
+    batt_low = 0;
     too_fast = 0;
     en_steer = 0;
 
-    
+    #1000000;
 
+    batt_low = 0;
+    too_fast = 0;
+    en_steer = 1;
+
+    #1000000;
+
+    batt_low = 0;
+    too_fast = 0;
+    en_steer = 0;
+
+    #1000000;
+
+    batt_low = 1;
+    too_fast = 0;
+    en_steer = 1;
+
+    #1000000;
+
+    batt_low = 0;
+    too_fast = 0;
+    en_steer = 0;
+
+    #1000000;
+
+    batt_low = 0;
+    too_fast = 1;
+    en_steer = 1;
 
 end
 
-always #20000000 clk <= ~clk; // 50 MHz
+always #1 clk <= ~clk; // 50 MHz
 
 endmodule

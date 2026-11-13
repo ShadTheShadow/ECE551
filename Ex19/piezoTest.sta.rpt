@@ -1,0 +1,1220 @@
+Timing Analyzer report for piezoTest
+Fri Nov 13 00:07:30 2026
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++---------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                         ;
++-----------------------+---------------------------------------------------------+
+; Quartus Prime Version ; Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                  ;
+; Revision Name         ; piezoTest                                               ;
+; Device Family         ; Cyclone IV E                                            ;
+; Device Name           ; EP4CE22F17C6                                            ;
+; Timing Models         ; Final                                                   ;
+; Delay Model           ; Combined                                                ;
+; Rise/Fall Delays      ; Enabled                                                 ;
++-----------------------+---------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.15        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   2.4%      ;
+;     Processors 3-16        ;   0.9%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 207.81 MHz ; 207.81 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -3.373 ; -224.565           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.343 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -85.000                          ;
++-------+--------+----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                  ;
++--------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.373 ; piezo_drv:iDUT|note_freq_tmr[12] ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.454     ; 3.914      ;
+; -3.188 ; piezo_drv:iDUT|note_freq_tmr[10] ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.454     ; 3.729      ;
+; -3.179 ; piezo_drv:iDUT|tmr_3sec[3]       ; piezo_drv:iDUT|tmr_3sec[22]       ; clk          ; clk         ; 1.000        ; -0.428     ; 3.746      ;
+; -3.170 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.439      ;
+; -3.170 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.439      ;
+; -3.170 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.439      ;
+; -3.170 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.439      ;
+; -3.170 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.274      ; 4.439      ;
+; -3.170 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.274      ; 4.439      ;
+; -3.162 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.431      ;
+; -3.162 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.431      ;
+; -3.162 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.431      ;
+; -3.162 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.431      ;
+; -3.162 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.274      ; 4.431      ;
+; -3.162 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.274      ; 4.431      ;
+; -3.153 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.422      ;
+; -3.153 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.422      ;
+; -3.153 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.422      ;
+; -3.153 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.422      ;
+; -3.153 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.274      ; 4.422      ;
+; -3.153 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.274      ; 4.422      ;
+; -3.151 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.399      ;
+; -3.151 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.399      ;
+; -3.151 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.399      ;
+; -3.151 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.399      ;
+; -3.151 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.253      ; 4.399      ;
+; -3.151 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.253      ; 4.399      ;
+; -3.148 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.396      ;
+; -3.148 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.396      ;
+; -3.148 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.396      ;
+; -3.148 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.396      ;
+; -3.148 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.253      ; 4.396      ;
+; -3.148 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.253      ; 4.396      ;
+; -3.145 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.414      ;
+; -3.145 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.414      ;
+; -3.145 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.414      ;
+; -3.145 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.414      ;
+; -3.145 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.274      ; 4.414      ;
+; -3.145 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.274      ; 4.414      ;
+; -3.141 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.410      ;
+; -3.141 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.410      ;
+; -3.141 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.410      ;
+; -3.141 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.410      ;
+; -3.141 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.274      ; 4.410      ;
+; -3.141 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.274      ; 4.410      ;
+; -3.138 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.407      ;
+; -3.138 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.407      ;
+; -3.138 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.407      ;
+; -3.138 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.274      ; 4.407      ;
+; -3.138 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.274      ; 4.407      ;
+; -3.138 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.274      ; 4.407      ;
+; -3.137 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.385      ;
+; -3.137 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.385      ;
+; -3.137 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.385      ;
+; -3.137 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.385      ;
+; -3.137 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.253      ; 4.385      ;
+; -3.137 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.253      ; 4.385      ;
+; -3.134 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.382      ;
+; -3.134 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.382      ;
+; -3.134 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.382      ;
+; -3.134 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.253      ; 4.382      ;
+; -3.134 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.253      ; 4.382      ;
+; -3.134 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.253      ; 4.382      ;
+; -3.113 ; piezo_drv:iDUT|note_freq_tmr[3]  ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.062     ; 4.046      ;
+; -3.089 ; piezo_drv:iDUT|note_dur_tmr[10]  ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; -0.093     ; 3.991      ;
+; -3.089 ; piezo_drv:iDUT|note_dur_tmr[10]  ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; -0.093     ; 3.991      ;
+; -3.089 ; piezo_drv:iDUT|note_dur_tmr[10]  ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; -0.093     ; 3.991      ;
+; -3.089 ; piezo_drv:iDUT|note_dur_tmr[10]  ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; -0.093     ; 3.991      ;
+; -3.089 ; piezo_drv:iDUT|note_dur_tmr[10]  ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; -0.093     ; 3.991      ;
+; -3.089 ; piezo_drv:iDUT|note_dur_tmr[10]  ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; -0.093     ; 3.991      ;
+; -3.087 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.062     ; 4.020      ;
+; -3.071 ; piezo_drv:iDUT|tmr_3sec[2]       ; piezo_drv:iDUT|tmr_3sec[22]       ; clk          ; clk         ; 1.000        ; -0.428     ; 3.638      ;
+; -3.061 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; -0.119     ; 3.937      ;
+; -3.061 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; -0.119     ; 3.937      ;
+; -3.061 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; -0.119     ; 3.937      ;
+; -3.061 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; -0.119     ; 3.937      ;
+; -3.061 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; -0.119     ; 3.937      ;
+; -3.061 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; -0.119     ; 3.937      ;
+; -3.058 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|note_dur_tmr[22]   ; clk          ; clk         ; 1.000        ; 0.273      ; 4.326      ;
+; -3.055 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|note_dur_tmr[22]   ; clk          ; clk         ; 1.000        ; 0.273      ; 4.323      ;
+; -3.055 ; piezo_drv:iDUT|note_freq_tmr[13] ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.454     ; 3.596      ;
+; -3.045 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[0]    ; clk          ; clk         ; 1.000        ; -0.062     ; 3.978      ;
+; -3.044 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|note_dur_tmr[22]   ; clk          ; clk         ; 1.000        ; 0.273      ; 4.312      ;
+; -3.044 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[14]   ; clk          ; clk         ; 1.000        ; -0.062     ; 3.977      ;
+; -3.044 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[13]   ; clk          ; clk         ; 1.000        ; -0.062     ; 3.977      ;
+; -3.043 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[1]    ; clk          ; clk         ; 1.000        ; -0.062     ; 3.976      ;
+; -3.041 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|note_dur_tmr[22]   ; clk          ; clk         ; 1.000        ; 0.273      ; 4.309      ;
+; -3.041 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[12]   ; clk          ; clk         ; 1.000        ; -0.062     ; 3.974      ;
+; -3.041 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[8]    ; clk          ; clk         ; 1.000        ; -0.062     ; 3.974      ;
+; -3.040 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[11]   ; clk          ; clk         ; 1.000        ; -0.062     ; 3.973      ;
+; -3.040 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[4]    ; clk          ; clk         ; 1.000        ; -0.062     ; 3.973      ;
+; -3.040 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[5]    ; clk          ; clk         ; 1.000        ; -0.062     ; 3.973      ;
+; -3.039 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[15]   ; clk          ; clk         ; 1.000        ; -0.062     ; 3.972      ;
+; -3.037 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[0]    ; clk          ; clk         ; 1.000        ; -0.062     ; 3.970      ;
+; -3.036 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[14]   ; clk          ; clk         ; 1.000        ; -0.062     ; 3.969      ;
+; -3.036 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[13]   ; clk          ; clk         ; 1.000        ; -0.062     ; 3.969      ;
+; -3.035 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[1]    ; clk          ; clk         ; 1.000        ; -0.062     ; 3.968      ;
+; -3.033 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[12]   ; clk          ; clk         ; 1.000        ; -0.062     ; 3.966      ;
+; -3.033 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[8]    ; clk          ; clk         ; 1.000        ; -0.062     ; 3.966      ;
+; -3.032 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[11]   ; clk          ; clk         ; 1.000        ; -0.062     ; 3.965      ;
++--------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                  ;
++-------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.343 ; piezo_drv:iDUT|state.WAIT_3      ; piezo_drv:iDUT|state.WAIT_3       ; clk          ; clk         ; 0.000        ; 0.077      ; 0.577      ;
+; 0.343 ; piezo_drv:iDUT|state.NOTE4       ; piezo_drv:iDUT|state.NOTE4        ; clk          ; clk         ; 0.000        ; 0.077      ; 0.577      ;
+; 0.382 ; piezo_drv:iDUT|note_freq_tmr[17] ; piezo_drv:iDUT|note_freq_tmr[17]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.617      ;
+; 0.398 ; piezo_drv:iDUT|state.NOTE2       ; piezo_drv:iDUT|state.NOTE3        ; clk          ; clk         ; 0.000        ; 0.063      ; 0.618      ;
+; 0.459 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.070      ;
+; 0.467 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.078      ;
+; 0.477 ; rst_synch:iRST|w0                ; rst_synch:iRST|rst_n              ; clk          ; clk         ; 0.000        ; 0.063      ; 0.697      ;
+; 0.530 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 0.000        ; 0.047      ; 0.734      ;
+; 0.553 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 0.000        ; 0.047      ; 0.757      ;
+; 0.554 ; piezo_drv:iDUT|note_freq_tmr[12] ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.789      ;
+; 0.554 ; piezo_drv:iDUT|note_freq_tmr[10] ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.789      ;
+; 0.557 ; piezo_drv:iDUT|note_freq_tmr[11] ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.792      ;
+; 0.561 ; piezo_drv:iDUT|note_freq_tmr[15] ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.796      ;
+; 0.563 ; piezo_drv:iDUT|note_freq_tmr[13] ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.798      ;
+; 0.563 ; piezo_drv:iDUT|note_freq_tmr[14] ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.798      ;
+; 0.564 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.175      ;
+; 0.567 ; piezo_drv:iDUT|note_freq_tmr[16] ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.802      ;
+; 0.568 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[6]   ; clk          ; clk         ; 0.000        ; 0.062      ; 0.787      ;
+; 0.569 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[8]   ; clk          ; clk         ; 0.000        ; 0.062      ; 0.788      ;
+; 0.569 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.180      ;
+; 0.570 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[4]   ; clk          ; clk         ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[7]   ; clk          ; clk         ; 0.000        ; 0.062      ; 0.789      ;
+; 0.571 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.182      ;
+; 0.573 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[5]   ; clk          ; clk         ; 0.000        ; 0.062      ; 0.792      ;
+; 0.577 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.188      ;
+; 0.578 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 0.000        ; 0.063      ; 0.798      ;
+; 0.579 ; piezo_drv:iDUT|note_freq_tmr[1]  ; piezo_drv:iDUT|note_freq_tmr[1]   ; clk          ; clk         ; 0.000        ; 0.062      ; 0.798      ;
+; 0.579 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.190      ;
+; 0.579 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.190      ;
+; 0.580 ; piezo_drv:iDUT|note_freq_tmr[2]  ; piezo_drv:iDUT|note_freq_tmr[2]   ; clk          ; clk         ; 0.000        ; 0.062      ; 0.799      ;
+; 0.590 ; piezo_drv:iDUT|state.NOTE5       ; piezo_drv:iDUT|state.NOTE6        ; clk          ; clk         ; 0.000        ; 0.063      ; 0.810      ;
+; 0.591 ; piezo_drv:iDUT|note_freq_tmr[0]  ; piezo_drv:iDUT|note_freq_tmr[0]   ; clk          ; clk         ; 0.000        ; 0.062      ; 0.810      ;
+; 0.593 ; piezo_drv:iDUT|note_freq_tmr[3]  ; piezo_drv:iDUT|note_freq_tmr[3]   ; clk          ; clk         ; 0.000        ; 0.062      ; 0.812      ;
+; 0.661 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|state.NOTE1        ; clk          ; clk         ; 0.000        ; 0.077      ; 0.895      ;
+; 0.668 ; piezo_drv:iDUT|state.NOTE2       ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 0.000        ; 0.407      ; 1.232      ;
+; 0.674 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.285      ;
+; 0.676 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.287      ;
+; 0.677 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.288      ;
+; 0.681 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.292      ;
+; 0.683 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.294      ;
+; 0.683 ; piezo_drv:iDUT|state.NOTE5       ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 0.000        ; 0.407      ; 1.247      ;
+; 0.686 ; piezo_drv:iDUT|state.NOTE3       ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 0.000        ; 0.407      ; 1.250      ;
+; 0.689 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.300      ;
+; 0.689 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.300      ;
+; 0.691 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.302      ;
+; 0.691 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.302      ;
+; 0.692 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.303      ;
+; 0.693 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 0.000        ; 0.047      ; 0.897      ;
+; 0.740 ; piezo_drv:iDUT|state.NOTE2       ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 0.000        ; 0.407      ; 1.304      ;
+; 0.750 ; piezo_drv:iDUT|state.NOTE4       ; piezo_drv:iDUT|state.NOTE5        ; clk          ; clk         ; 0.000        ; -0.289     ; 0.618      ;
+; 0.758 ; piezo_drv:iDUT|state.NOTE1       ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 0.000        ; 0.047      ; 0.962      ;
+; 0.786 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.397      ;
+; 0.787 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.398      ;
+; 0.788 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.399      ;
+; 0.789 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.400      ;
+; 0.793 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.404      ;
+; 0.795 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.406      ;
+; 0.801 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.412      ;
+; 0.801 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.412      ;
+; 0.802 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.413      ;
+; 0.803 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.414      ;
+; 0.803 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.414      ;
+; 0.804 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.415      ;
+; 0.809 ; piezo_drv:iDUT|note_freq_tmr[3]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.420      ;
+; 0.815 ; piezo_drv:iDUT|note_freq_tmr[2]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.426      ;
+; 0.829 ; piezo_drv:iDUT|note_freq_tmr[11] ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.078      ; 1.064      ;
+; 0.836 ; piezo_drv:iDUT|note_freq_tmr[15] ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.078      ; 1.071      ;
+; 0.837 ; piezo_drv:iDUT|note_freq_tmr[13] ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.078      ; 1.072      ;
+; 0.842 ; piezo_drv:iDUT|note_freq_tmr[12] ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.078      ; 1.077      ;
+; 0.843 ; piezo_drv:iDUT|note_freq_tmr[10] ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.078      ; 1.078      ;
+; 0.844 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[8]   ; clk          ; clk         ; 0.000        ; 0.062      ; 1.063      ;
+; 0.844 ; piezo_drv:iDUT|note_freq_tmr[12] ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.078      ; 1.079      ;
+; 0.845 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[6]   ; clk          ; clk         ; 0.000        ; 0.062      ; 1.064      ;
+; 0.845 ; piezo_drv:iDUT|note_freq_tmr[10] ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.078      ; 1.080      ;
+; 0.851 ; piezo_drv:iDUT|note_freq_tmr[14] ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.078      ; 1.086      ;
+; 0.853 ; piezo_drv:iDUT|note_freq_tmr[1]  ; piezo_drv:iDUT|note_freq_tmr[2]   ; clk          ; clk         ; 0.000        ; 0.062      ; 1.072      ;
+; 0.853 ; piezo_drv:iDUT|note_freq_tmr[14] ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.078      ; 1.088      ;
+; 0.854 ; piezo_drv:iDUT|note_freq_tmr[16] ; piezo_drv:iDUT|note_freq_tmr[17]  ; clk          ; clk         ; 0.000        ; 0.078      ; 1.089      ;
+; 0.856 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 0.000        ; 0.063      ; 1.076      ;
+; 0.857 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[7]   ; clk          ; clk         ; 0.000        ; 0.062      ; 1.076      ;
+; 0.858 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[5]   ; clk          ; clk         ; 0.000        ; 0.062      ; 1.077      ;
+; 0.859 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[8]   ; clk          ; clk         ; 0.000        ; 0.062      ; 1.078      ;
+; 0.860 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[6]   ; clk          ; clk         ; 0.000        ; 0.062      ; 1.079      ;
+; 0.865 ; piezo_drv:iDUT|note_freq_tmr[3]  ; piezo_drv:iDUT|note_freq_tmr[4]   ; clk          ; clk         ; 0.000        ; 0.062      ; 1.084      ;
+; 0.866 ; piezo_drv:iDUT|note_dur_tmr[18]  ; piezo_drv:iDUT|note_dur_tmr[19]   ; clk          ; clk         ; 0.000        ; 0.454      ; 1.477      ;
+; 0.869 ; piezo_drv:iDUT|note_freq_tmr[0]  ; piezo_drv:iDUT|note_freq_tmr[1]   ; clk          ; clk         ; 0.000        ; 0.062      ; 1.088      ;
+; 0.869 ; piezo_drv:iDUT|note_freq_tmr[2]  ; piezo_drv:iDUT|note_freq_tmr[3]   ; clk          ; clk         ; 0.000        ; 0.062      ; 1.088      ;
+; 0.871 ; piezo_drv:iDUT|note_freq_tmr[0]  ; piezo_drv:iDUT|note_freq_tmr[2]   ; clk          ; clk         ; 0.000        ; 0.062      ; 1.090      ;
+; 0.871 ; piezo_drv:iDUT|note_freq_tmr[2]  ; piezo_drv:iDUT|note_freq_tmr[4]   ; clk          ; clk         ; 0.000        ; 0.062      ; 1.090      ;
+; 0.898 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.509      ;
+; 0.899 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.510      ;
+; 0.900 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.511      ;
+; 0.901 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.512      ;
+; 0.905 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[17]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.516      ;
+; 0.909 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|state.IDLE         ; clk          ; clk         ; 0.000        ; 0.077      ; 1.143      ;
+; 0.909 ; piezo_drv:iDUT|note_freq_tmr[1]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.520      ;
+; 0.913 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.524      ;
+; 0.913 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[17]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.524      ;
+; 0.914 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.525      ;
+; 0.915 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.454      ; 1.526      ;
++-------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 226.14 MHz ; 226.14 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -2.921 ; -192.782          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.298 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -85.000                         ;
++-------+--------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                   ;
++--------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.921 ; piezo_drv:iDUT|note_freq_tmr[12] ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.409     ; 3.507      ;
+; -2.762 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.982      ;
+; -2.762 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.982      ;
+; -2.762 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.982      ;
+; -2.762 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.982      ;
+; -2.762 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.982      ;
+; -2.762 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.982      ;
+; -2.760 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.980      ;
+; -2.760 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.980      ;
+; -2.760 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.980      ;
+; -2.760 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.980      ;
+; -2.760 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.980      ;
+; -2.760 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.980      ;
+; -2.754 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.995      ;
+; -2.754 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.995      ;
+; -2.754 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.995      ;
+; -2.754 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.995      ;
+; -2.754 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.246      ; 3.995      ;
+; -2.754 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.246      ; 3.995      ;
+; -2.754 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.974      ;
+; -2.754 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.974      ;
+; -2.754 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.974      ;
+; -2.754 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.974      ;
+; -2.754 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.974      ;
+; -2.754 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.974      ;
+; -2.751 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.992      ;
+; -2.751 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.992      ;
+; -2.751 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.992      ;
+; -2.751 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.992      ;
+; -2.751 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.246      ; 3.992      ;
+; -2.751 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.246      ; 3.992      ;
+; -2.751 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.971      ;
+; -2.751 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.971      ;
+; -2.751 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.971      ;
+; -2.751 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.971      ;
+; -2.751 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.971      ;
+; -2.751 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.971      ;
+; -2.747 ; piezo_drv:iDUT|note_freq_tmr[10] ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.409     ; 3.333      ;
+; -2.738 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.979      ;
+; -2.738 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.979      ;
+; -2.738 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.979      ;
+; -2.738 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.979      ;
+; -2.738 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.246      ; 3.979      ;
+; -2.738 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.246      ; 3.979      ;
+; -2.731 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.972      ;
+; -2.731 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.972      ;
+; -2.731 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.972      ;
+; -2.731 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.972      ;
+; -2.731 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.246      ; 3.972      ;
+; -2.731 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.246      ; 3.972      ;
+; -2.726 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.967      ;
+; -2.726 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.967      ;
+; -2.726 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.967      ;
+; -2.726 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.967      ;
+; -2.726 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.246      ; 3.967      ;
+; -2.726 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.246      ; 3.967      ;
+; -2.724 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.965      ;
+; -2.724 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.965      ;
+; -2.724 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.965      ;
+; -2.724 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.246      ; 3.965      ;
+; -2.724 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.246      ; 3.965      ;
+; -2.724 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.246      ; 3.965      ;
+; -2.713 ; piezo_drv:iDUT|note_freq_tmr[3]  ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.055     ; 3.653      ;
+; -2.690 ; piezo_drv:iDUT|note_dur_tmr[10]  ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; -0.084     ; 3.601      ;
+; -2.690 ; piezo_drv:iDUT|note_dur_tmr[10]  ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; -0.084     ; 3.601      ;
+; -2.690 ; piezo_drv:iDUT|note_dur_tmr[10]  ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; -0.084     ; 3.601      ;
+; -2.690 ; piezo_drv:iDUT|note_dur_tmr[10]  ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; -0.084     ; 3.601      ;
+; -2.690 ; piezo_drv:iDUT|note_dur_tmr[10]  ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; -0.084     ; 3.601      ;
+; -2.690 ; piezo_drv:iDUT|note_dur_tmr[10]  ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; -0.084     ; 3.601      ;
+; -2.673 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|note_dur_tmr[22]   ; clk          ; clk         ; 1.000        ; 0.246      ; 3.914      ;
+; -2.673 ; piezo_drv:iDUT|tmr_3sec[3]       ; piezo_drv:iDUT|tmr_3sec[22]       ; clk          ; clk         ; 1.000        ; -0.384     ; 3.284      ;
+; -2.671 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|note_dur_tmr[22]   ; clk          ; clk         ; 1.000        ; 0.246      ; 3.912      ;
+; -2.669 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; -0.111     ; 3.553      ;
+; -2.669 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; -0.111     ; 3.553      ;
+; -2.669 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; -0.111     ; 3.553      ;
+; -2.669 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; -0.111     ; 3.553      ;
+; -2.669 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; -0.111     ; 3.553      ;
+; -2.669 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; -0.111     ; 3.553      ;
+; -2.665 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|note_dur_tmr[22]   ; clk          ; clk         ; 1.000        ; 0.246      ; 3.906      ;
+; -2.662 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|note_dur_tmr[22]   ; clk          ; clk         ; 1.000        ; 0.246      ; 3.903      ;
+; -2.660 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.055     ; 3.600      ;
+; -2.655 ; piezo_drv:iDUT|tmr_3sec[22]      ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.875      ;
+; -2.655 ; piezo_drv:iDUT|tmr_3sec[22]      ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.875      ;
+; -2.655 ; piezo_drv:iDUT|tmr_3sec[22]      ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.875      ;
+; -2.655 ; piezo_drv:iDUT|tmr_3sec[22]      ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.875      ;
+; -2.655 ; piezo_drv:iDUT|tmr_3sec[22]      ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.875      ;
+; -2.655 ; piezo_drv:iDUT|tmr_3sec[22]      ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.875      ;
+; -2.650 ; piezo_drv:iDUT|tmr_3sec[21]      ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.870      ;
+; -2.650 ; piezo_drv:iDUT|tmr_3sec[21]      ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.870      ;
+; -2.650 ; piezo_drv:iDUT|tmr_3sec[21]      ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.870      ;
+; -2.650 ; piezo_drv:iDUT|tmr_3sec[21]      ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.870      ;
+; -2.650 ; piezo_drv:iDUT|tmr_3sec[21]      ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.870      ;
+; -2.650 ; piezo_drv:iDUT|tmr_3sec[21]      ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.870      ;
+; -2.638 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|note_dur_tmr[22]   ; clk          ; clk         ; 1.000        ; -0.090     ; 3.543      ;
+; -2.637 ; piezo_drv:iDUT|tmr_3sec[9]       ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.857      ;
+; -2.637 ; piezo_drv:iDUT|tmr_3sec[9]       ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.857      ;
+; -2.637 ; piezo_drv:iDUT|tmr_3sec[9]       ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.857      ;
+; -2.637 ; piezo_drv:iDUT|tmr_3sec[9]       ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.225      ; 3.857      ;
+; -2.637 ; piezo_drv:iDUT|tmr_3sec[9]       ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.857      ;
+; -2.637 ; piezo_drv:iDUT|tmr_3sec[9]       ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.225      ; 3.857      ;
++--------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                   ;
++-------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.298 ; piezo_drv:iDUT|state.WAIT_3      ; piezo_drv:iDUT|state.WAIT_3       ; clk          ; clk         ; 0.000        ; 0.069      ; 0.511      ;
+; 0.299 ; piezo_drv:iDUT|state.NOTE4       ; piezo_drv:iDUT|state.NOTE4        ; clk          ; clk         ; 0.000        ; 0.068      ; 0.511      ;
+; 0.338 ; piezo_drv:iDUT|note_freq_tmr[17] ; piezo_drv:iDUT|note_freq_tmr[17]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.552      ;
+; 0.361 ; piezo_drv:iDUT|state.NOTE2       ; piezo_drv:iDUT|state.NOTE3        ; clk          ; clk         ; 0.000        ; 0.055      ; 0.560      ;
+; 0.408 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.409      ; 0.961      ;
+; 0.413 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.409      ; 0.966      ;
+; 0.431 ; rst_synch:iRST|w0                ; rst_synch:iRST|rst_n              ; clk          ; clk         ; 0.000        ; 0.055      ; 0.630      ;
+; 0.475 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.658      ;
+; 0.497 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.050      ;
+; 0.497 ; piezo_drv:iDUT|note_freq_tmr[12] ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.711      ;
+; 0.498 ; piezo_drv:iDUT|note_freq_tmr[10] ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.712      ;
+; 0.500 ; piezo_drv:iDUT|note_freq_tmr[11] ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.714      ;
+; 0.500 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.683      ;
+; 0.500 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.053      ;
+; 0.502 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.055      ;
+; 0.504 ; piezo_drv:iDUT|note_freq_tmr[15] ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.718      ;
+; 0.504 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.057      ;
+; 0.505 ; piezo_drv:iDUT|note_freq_tmr[13] ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.719      ;
+; 0.505 ; piezo_drv:iDUT|note_freq_tmr[14] ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.719      ;
+; 0.509 ; piezo_drv:iDUT|note_freq_tmr[16] ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.723      ;
+; 0.509 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.062      ;
+; 0.509 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.062      ;
+; 0.510 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[6]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.709      ;
+; 0.511 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[8]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.710      ;
+; 0.512 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[4]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.711      ;
+; 0.513 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[7]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.712      ;
+; 0.516 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[5]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.715      ;
+; 0.519 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.718      ;
+; 0.520 ; piezo_drv:iDUT|note_freq_tmr[2]  ; piezo_drv:iDUT|note_freq_tmr[2]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.719      ;
+; 0.521 ; piezo_drv:iDUT|note_freq_tmr[1]  ; piezo_drv:iDUT|note_freq_tmr[1]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.720      ;
+; 0.529 ; piezo_drv:iDUT|state.NOTE5       ; piezo_drv:iDUT|state.NOTE6        ; clk          ; clk         ; 0.000        ; 0.055      ; 0.728      ;
+; 0.533 ; piezo_drv:iDUT|note_freq_tmr[0]  ; piezo_drv:iDUT|note_freq_tmr[0]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.732      ;
+; 0.533 ; piezo_drv:iDUT|note_freq_tmr[3]  ; piezo_drv:iDUT|note_freq_tmr[3]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.732      ;
+; 0.589 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.142      ;
+; 0.590 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|state.NOTE1        ; clk          ; clk         ; 0.000        ; 0.068      ; 0.802      ;
+; 0.593 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.146      ;
+; 0.596 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.149      ;
+; 0.597 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.150      ;
+; 0.598 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.151      ;
+; 0.598 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.151      ;
+; 0.600 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.153      ;
+; 0.605 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.158      ;
+; 0.605 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.158      ;
+; 0.606 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.159      ;
+; 0.612 ; piezo_drv:iDUT|state.NOTE2       ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 0.000        ; 0.362      ; 1.118      ;
+; 0.621 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.804      ;
+; 0.629 ; piezo_drv:iDUT|state.NOTE3       ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 0.000        ; 0.362      ; 1.135      ;
+; 0.629 ; piezo_drv:iDUT|state.NOTE5       ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 0.000        ; 0.362      ; 1.135      ;
+; 0.677 ; piezo_drv:iDUT|state.NOTE2       ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 0.000        ; 0.362      ; 1.183      ;
+; 0.678 ; piezo_drv:iDUT|state.NOTE4       ; piezo_drv:iDUT|state.NOTE5        ; clk          ; clk         ; 0.000        ; -0.261     ; 0.561      ;
+; 0.685 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.238      ;
+; 0.686 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.239      ;
+; 0.689 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.242      ;
+; 0.692 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.245      ;
+; 0.693 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.246      ;
+; 0.694 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.247      ;
+; 0.694 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.247      ;
+; 0.695 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.248      ;
+; 0.696 ; piezo_drv:iDUT|state.NOTE1       ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.879      ;
+; 0.696 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.249      ;
+; 0.701 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.254      ;
+; 0.701 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.254      ;
+; 0.702 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.255      ;
+; 0.710 ; piezo_drv:iDUT|note_freq_tmr[3]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.263      ;
+; 0.712 ; piezo_drv:iDUT|note_freq_tmr[2]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.265      ;
+; 0.743 ; piezo_drv:iDUT|note_freq_tmr[11] ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.957      ;
+; 0.746 ; piezo_drv:iDUT|note_freq_tmr[12] ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.960      ;
+; 0.748 ; piezo_drv:iDUT|note_freq_tmr[15] ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.962      ;
+; 0.749 ; piezo_drv:iDUT|note_freq_tmr[10] ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.963      ;
+; 0.750 ; piezo_drv:iDUT|note_freq_tmr[13] ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.964      ;
+; 0.753 ; piezo_drv:iDUT|note_freq_tmr[12] ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.967      ;
+; 0.754 ; piezo_drv:iDUT|note_freq_tmr[14] ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.968      ;
+; 0.756 ; piezo_drv:iDUT|note_freq_tmr[10] ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.970      ;
+; 0.758 ; piezo_drv:iDUT|note_freq_tmr[16] ; piezo_drv:iDUT|note_freq_tmr[17]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.972      ;
+; 0.758 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[8]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.957      ;
+; 0.759 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[6]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.958      ;
+; 0.760 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[7]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.959      ;
+; 0.760 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.959      ;
+; 0.761 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[5]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.960      ;
+; 0.761 ; piezo_drv:iDUT|note_freq_tmr[14] ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.975      ;
+; 0.766 ; piezo_drv:iDUT|note_freq_tmr[1]  ; piezo_drv:iDUT|note_freq_tmr[2]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.965      ;
+; 0.767 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[8]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.966      ;
+; 0.768 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[6]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.967      ;
+; 0.771 ; piezo_drv:iDUT|note_freq_tmr[2]  ; piezo_drv:iDUT|note_freq_tmr[3]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.970      ;
+; 0.772 ; piezo_drv:iDUT|note_freq_tmr[0]  ; piezo_drv:iDUT|note_freq_tmr[1]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.971      ;
+; 0.776 ; piezo_drv:iDUT|note_dur_tmr[18]  ; piezo_drv:iDUT|note_dur_tmr[19]   ; clk          ; clk         ; 0.000        ; 0.409      ; 1.329      ;
+; 0.776 ; piezo_drv:iDUT|note_freq_tmr[3]  ; piezo_drv:iDUT|note_freq_tmr[4]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.975      ;
+; 0.778 ; piezo_drv:iDUT|note_freq_tmr[2]  ; piezo_drv:iDUT|note_freq_tmr[4]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.977      ;
+; 0.779 ; piezo_drv:iDUT|note_freq_tmr[0]  ; piezo_drv:iDUT|note_freq_tmr[2]   ; clk          ; clk         ; 0.000        ; 0.055      ; 0.978      ;
+; 0.781 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.334      ;
+; 0.782 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.335      ;
+; 0.785 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[17]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.338      ;
+; 0.788 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.341      ;
+; 0.789 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.342      ;
+; 0.790 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.343      ;
+; 0.790 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[17]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.343      ;
+; 0.791 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.344      ;
+; 0.796 ; piezo_drv:iDUT|note_freq_tmr[1]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.349      ;
+; 0.797 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.350      ;
+; 0.798 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.409      ; 1.351      ;
++-------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -1.477 ; -93.270           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.178 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -109.019                        ;
++-------+--------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                   ;
++--------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.477 ; piezo_drv:iDUT|note_freq_tmr[12] ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.245     ; 2.219      ;
+; -1.390 ; piezo_drv:iDUT|tmr_3sec[3]       ; piezo_drv:iDUT|tmr_3sec[22]       ; clk          ; clk         ; 1.000        ; -0.234     ; 2.143      ;
+; -1.369 ; piezo_drv:iDUT|note_freq_tmr[10] ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.245     ; 2.111      ;
+; -1.358 ; piezo_drv:iDUT|note_freq_tmr[3]  ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.309      ;
+; -1.339 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.290      ;
+; -1.335 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.470      ;
+; -1.335 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.470      ;
+; -1.335 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.470      ;
+; -1.335 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.470      ;
+; -1.335 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.470      ;
+; -1.335 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.470      ;
+; -1.331 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.466      ;
+; -1.331 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.466      ;
+; -1.331 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.466      ;
+; -1.331 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.466      ;
+; -1.331 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.466      ;
+; -1.331 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.466      ;
+; -1.325 ; piezo_drv:iDUT|tmr_3sec[2]       ; piezo_drv:iDUT|tmr_3sec[22]       ; clk          ; clk         ; 1.000        ; -0.234     ; 2.078      ;
+; -1.322 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.457      ;
+; -1.322 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.457      ;
+; -1.322 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.457      ;
+; -1.322 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.457      ;
+; -1.322 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.457      ;
+; -1.322 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.457      ;
+; -1.315 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.450      ;
+; -1.315 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.450      ;
+; -1.315 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.450      ;
+; -1.315 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.450      ;
+; -1.315 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.450      ;
+; -1.315 ; piezo_drv:iDUT|note_dur_tmr[5]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.450      ;
+; -1.311 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.446      ;
+; -1.311 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.446      ;
+; -1.311 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.446      ;
+; -1.311 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.446      ;
+; -1.311 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.446      ;
+; -1.311 ; piezo_drv:iDUT|note_dur_tmr[15]  ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.446      ;
+; -1.311 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.446      ;
+; -1.311 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.446      ;
+; -1.311 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.446      ;
+; -1.311 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.148      ; 2.446      ;
+; -1.311 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.446      ;
+; -1.311 ; piezo_drv:iDUT|note_dur_tmr[14]  ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.148      ; 2.446      ;
+; -1.297 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[14]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.248      ;
+; -1.297 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[13]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.248      ;
+; -1.297 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[1]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.248      ;
+; -1.296 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[0]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.247      ;
+; -1.296 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[8]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.247      ;
+; -1.295 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[5]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.246      ;
+; -1.294 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.412      ;
+; -1.294 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.412      ;
+; -1.294 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.412      ;
+; -1.294 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.412      ;
+; -1.294 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.131      ; 2.412      ;
+; -1.294 ; piezo_drv:iDUT|tmr_3sec[11]      ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.131      ; 2.412      ;
+; -1.294 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[11]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.245      ;
+; -1.294 ; piezo_drv:iDUT|note_freq_tmr[13] ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 1.000        ; -0.245     ; 2.036      ;
+; -1.293 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[15]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.244      ;
+; -1.293 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[14]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.244      ;
+; -1.293 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[13]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.244      ;
+; -1.293 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[1]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.244      ;
+; -1.292 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.410      ;
+; -1.292 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.410      ;
+; -1.292 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.410      ;
+; -1.292 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.410      ;
+; -1.292 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.131      ; 2.410      ;
+; -1.292 ; piezo_drv:iDUT|tmr_3sec[8]       ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.131      ; 2.410      ;
+; -1.292 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[4]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.243      ;
+; -1.292 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[0]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.243      ;
+; -1.292 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[8]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.243      ;
+; -1.291 ; piezo_drv:iDUT|note_dur_tmr[6]   ; piezo_drv:iDUT|note_dur_tmr[12]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.242      ;
+; -1.291 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[5]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.242      ;
+; -1.290 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[11]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.241      ;
+; -1.289 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[15]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.240      ;
+; -1.288 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.406      ;
+; -1.288 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.406      ;
+; -1.288 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.406      ;
+; -1.288 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.406      ;
+; -1.288 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.131      ; 2.406      ;
+; -1.288 ; piezo_drv:iDUT|tmr_3sec[19]      ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.131      ; 2.406      ;
+; -1.288 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[4]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.239      ;
+; -1.287 ; piezo_drv:iDUT|note_dur_tmr[2]   ; piezo_drv:iDUT|note_dur_tmr[12]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.238      ;
+; -1.286 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.404      ;
+; -1.286 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.404      ;
+; -1.286 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.404      ;
+; -1.286 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.131      ; 2.404      ;
+; -1.286 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.131      ; 2.404      ;
+; -1.286 ; piezo_drv:iDUT|tmr_3sec[17]      ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.131      ; 2.404      ;
+; -1.284 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|note_dur_tmr[14]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.235      ;
+; -1.284 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|note_dur_tmr[13]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.235      ;
+; -1.284 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|note_dur_tmr[1]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.235      ;
+; -1.283 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|note_dur_tmr[0]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.234      ;
+; -1.283 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|note_dur_tmr[8]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.234      ;
+; -1.282 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|note_dur_tmr[5]    ; clk          ; clk         ; 1.000        ; -0.036     ; 2.233      ;
+; -1.281 ; piezo_drv:iDUT|note_dur_tmr[9]   ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 1.000        ; 0.143      ; 2.411      ;
+; -1.281 ; piezo_drv:iDUT|note_dur_tmr[9]   ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 1.000        ; 0.143      ; 2.411      ;
+; -1.281 ; piezo_drv:iDUT|note_dur_tmr[9]   ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 1.000        ; 0.143      ; 2.411      ;
+; -1.281 ; piezo_drv:iDUT|note_dur_tmr[9]   ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 1.000        ; 0.143      ; 2.411      ;
+; -1.281 ; piezo_drv:iDUT|note_dur_tmr[9]   ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 1.000        ; 0.143      ; 2.411      ;
+; -1.281 ; piezo_drv:iDUT|note_dur_tmr[9]   ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 1.000        ; 0.143      ; 2.411      ;
+; -1.281 ; piezo_drv:iDUT|note_dur_tmr[4]   ; piezo_drv:iDUT|note_dur_tmr[11]   ; clk          ; clk         ; 1.000        ; -0.036     ; 2.232      ;
++--------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                   ;
++-------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.178 ; piezo_drv:iDUT|state.WAIT_3      ; piezo_drv:iDUT|state.WAIT_3       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.179 ; piezo_drv:iDUT|state.NOTE4       ; piezo_drv:iDUT|state.NOTE4        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.200 ; piezo_drv:iDUT|note_freq_tmr[17] ; piezo_drv:iDUT|note_freq_tmr[17]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.329      ;
+; 0.209 ; piezo_drv:iDUT|state.NOTE2       ; piezo_drv:iDUT|state.NOTE3        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.329      ;
+; 0.249 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.245      ; 0.578      ;
+; 0.249 ; rst_synch:iRST|w0                ; rst_synch:iRST|rst_n              ; clk          ; clk         ; 0.000        ; 0.039      ; 0.372      ;
+; 0.256 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.586      ;
+; 0.287 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 0.000        ; 0.029      ; 0.400      ;
+; 0.292 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|curr_note_freq[6]  ; clk          ; clk         ; 0.000        ; 0.029      ; 0.405      ;
+; 0.296 ; piezo_drv:iDUT|note_freq_tmr[10] ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.425      ;
+; 0.297 ; piezo_drv:iDUT|note_freq_tmr[12] ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.426      ;
+; 0.298 ; piezo_drv:iDUT|note_freq_tmr[11] ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.427      ;
+; 0.300 ; piezo_drv:iDUT|note_freq_tmr[15] ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.429      ;
+; 0.302 ; piezo_drv:iDUT|note_freq_tmr[13] ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.431      ;
+; 0.302 ; piezo_drv:iDUT|note_freq_tmr[14] ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.431      ;
+; 0.303 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[6]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.424      ;
+; 0.303 ; piezo_drv:iDUT|note_freq_tmr[16] ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.432      ;
+; 0.304 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[7]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[8]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.305 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[4]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.306 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[5]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.309 ; piezo_drv:iDUT|note_freq_tmr[1]  ; piezo_drv:iDUT|note_freq_tmr[1]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.430      ;
+; 0.310 ; piezo_drv:iDUT|note_freq_tmr[2]  ; piezo_drv:iDUT|note_freq_tmr[2]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.431      ;
+; 0.310 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.430      ;
+; 0.310 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.640      ;
+; 0.312 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.245      ; 0.641      ;
+; 0.315 ; piezo_drv:iDUT|note_freq_tmr[0]  ; piezo_drv:iDUT|note_freq_tmr[0]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.436      ;
+; 0.315 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.245      ; 0.644      ;
+; 0.317 ; piezo_drv:iDUT|state.NOTE5       ; piezo_drv:iDUT|state.NOTE6        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.437      ;
+; 0.318 ; piezo_drv:iDUT|note_freq_tmr[3]  ; piezo_drv:iDUT|note_freq_tmr[3]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.439      ;
+; 0.319 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.649      ;
+; 0.322 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.652      ;
+; 0.322 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.652      ;
+; 0.353 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|state.NOTE1        ; clk          ; clk         ; 0.000        ; 0.045      ; 0.482      ;
+; 0.356 ; piezo_drv:iDUT|state.NOTE5       ; piezo_drv:iDUT|curr_note_freq[11] ; clk          ; clk         ; 0.000        ; 0.223      ; 0.663      ;
+; 0.357 ; piezo_drv:iDUT|state.NOTE3       ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 0.000        ; 0.223      ; 0.664      ;
+; 0.361 ; piezo_drv:iDUT|state.NOTE2       ; piezo_drv:iDUT|curr_note_freq[0]  ; clk          ; clk         ; 0.000        ; 0.223      ; 0.668      ;
+; 0.372 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|curr_note_freq[10] ; clk          ; clk         ; 0.000        ; 0.029      ; 0.485      ;
+; 0.373 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.703      ;
+; 0.376 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.706      ;
+; 0.377 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.707      ;
+; 0.378 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.245      ; 0.707      ;
+; 0.381 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.245      ; 0.710      ;
+; 0.385 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.715      ;
+; 0.385 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.715      ;
+; 0.388 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.718      ;
+; 0.388 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.718      ;
+; 0.389 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.719      ;
+; 0.396 ; piezo_drv:iDUT|state.NOTE2       ; piezo_drv:iDUT|curr_note_freq[9]  ; clk          ; clk         ; 0.000        ; 0.223      ; 0.703      ;
+; 0.398 ; piezo_drv:iDUT|state.NOTE4       ; piezo_drv:iDUT|state.NOTE5        ; clk          ; clk         ; 0.000        ; -0.154     ; 0.328      ;
+; 0.400 ; piezo_drv:iDUT|state.NOTE1       ; piezo_drv:iDUT|curr_note_freq[5]  ; clk          ; clk         ; 0.000        ; 0.029      ; 0.513      ;
+; 0.439 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.769      ;
+; 0.440 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.770      ;
+; 0.442 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.772      ;
+; 0.443 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.773      ;
+; 0.444 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.245      ; 0.773      ;
+; 0.446 ; piezo_drv:iDUT|note_freq_tmr[11] ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.575      ;
+; 0.447 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.245      ; 0.776      ;
+; 0.449 ; piezo_drv:iDUT|note_freq_tmr[15] ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.578      ;
+; 0.451 ; piezo_drv:iDUT|note_freq_tmr[13] ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.580      ;
+; 0.451 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.781      ;
+; 0.451 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.781      ;
+; 0.452 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.782      ;
+; 0.453 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[8]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.454 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[6]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.454 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.784      ;
+; 0.454 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.784      ;
+; 0.455 ; piezo_drv:iDUT|note_freq_tmr[10] ; piezo_drv:iDUT|note_freq_tmr[11]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.584      ;
+; 0.455 ; piezo_drv:iDUT|note_freq_tmr[12] ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.584      ;
+; 0.455 ; piezo_drv:iDUT|note_freq_tmr[3]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.785      ;
+; 0.455 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.785      ;
+; 0.458 ; piezo_drv:iDUT|note_freq_tmr[1]  ; piezo_drv:iDUT|note_freq_tmr[2]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.579      ;
+; 0.458 ; piezo_drv:iDUT|note_freq_tmr[10] ; piezo_drv:iDUT|note_freq_tmr[12]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.587      ;
+; 0.458 ; piezo_drv:iDUT|note_freq_tmr[12] ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.587      ;
+; 0.460 ; piezo_drv:iDUT|note_freq_tmr[14] ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.589      ;
+; 0.461 ; piezo_drv:iDUT|note_freq_tmr[16] ; piezo_drv:iDUT|note_freq_tmr[17]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.590      ;
+; 0.461 ; piezo_drv:iDUT|note_freq_tmr[2]  ; piezo_drv:iDUT|note_freq_tmr[10]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.791      ;
+; 0.462 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[7]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.583      ;
+; 0.462 ; piezo_drv:iDUT|note_freq_tmr[8]  ; piezo_drv:iDUT|note_freq_tmr[9]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.583      ;
+; 0.463 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[5]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.463 ; piezo_drv:iDUT|note_freq_tmr[14] ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.592      ;
+; 0.465 ; piezo_drv:iDUT|note_freq_tmr[6]  ; piezo_drv:iDUT|note_freq_tmr[8]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.586      ;
+; 0.466 ; piezo_drv:iDUT|note_freq_tmr[3]  ; piezo_drv:iDUT|note_freq_tmr[4]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.587      ;
+; 0.466 ; piezo_drv:iDUT|note_freq_tmr[4]  ; piezo_drv:iDUT|note_freq_tmr[6]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.587      ;
+; 0.467 ; piezo_drv:iDUT|note_dur_tmr[18]  ; piezo_drv:iDUT|note_dur_tmr[19]   ; clk          ; clk         ; 0.000        ; 0.246      ; 0.797      ;
+; 0.468 ; piezo_drv:iDUT|note_freq_tmr[0]  ; piezo_drv:iDUT|note_freq_tmr[1]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.589      ;
+; 0.469 ; piezo_drv:iDUT|note_freq_tmr[2]  ; piezo_drv:iDUT|note_freq_tmr[3]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.590      ;
+; 0.471 ; piezo_drv:iDUT|note_freq_tmr[0]  ; piezo_drv:iDUT|note_freq_tmr[2]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.592      ;
+; 0.472 ; piezo_drv:iDUT|note_freq_tmr[2]  ; piezo_drv:iDUT|note_freq_tmr[4]   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.593      ;
+; 0.492 ; piezo_drv:iDUT|state.IDLE        ; piezo_drv:iDUT|state.IDLE         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.621      ;
+; 0.505 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[15]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.835      ;
+; 0.506 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.836      ;
+; 0.508 ; piezo_drv:iDUT|note_freq_tmr[7]  ; piezo_drv:iDUT|note_freq_tmr[16]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.838      ;
+; 0.508 ; piezo_drv:iDUT|tmr_3sec[23]      ; piezo_drv:iDUT|tmr_3sec[23]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.629      ;
+; 0.509 ; piezo_drv:iDUT|note_freq_tmr[11] ; piezo_drv:iDUT|note_freq_tmr[13]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.638      ;
+; 0.509 ; piezo_drv:iDUT|note_freq_tmr[5]  ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.246      ; 0.839      ;
+; 0.510 ; piezo_drv:iDUT|note_freq_tmr[9]  ; piezo_drv:iDUT|note_freq_tmr[17]  ; clk          ; clk         ; 0.000        ; 0.245      ; 0.839      ;
+; 0.511 ; piezo_drv:iDUT|note_dur_tmr[19]  ; piezo_drv:iDUT|note_dur_tmr[19]   ; clk          ; clk         ; 0.000        ; 0.045      ; 0.640      ;
+; 0.512 ; piezo_drv:iDUT|note_freq_tmr[11] ; piezo_drv:iDUT|note_freq_tmr[14]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.641      ;
+; 0.512 ; piezo_drv:iDUT|note_freq_tmr[15] ; piezo_drv:iDUT|note_freq_tmr[17]  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.641      ;
++-------+----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.373   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -3.373   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -224.565 ; 0.0   ; 0.0      ; 0.0     ; -109.019            ;
+;  clk             ; -224.565 ; 0.000 ; N/A      ; N/A     ; -109.019            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; piezo         ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; piezo_n       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED[0]        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED[1]        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED[2]        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED[3]        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED[4]        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED[5]        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED[6]        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED[7]        ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; en_steer                ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; too_fast                ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; batt_low                ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; clk                     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; RST_n                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_DATA0~          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; piezo         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.24e-08 V                   ; 3.14 V              ; -0.115 V            ; 0.31 V                               ; 0.241 V                              ; 5.06e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.24e-08 V                  ; 3.14 V             ; -0.115 V           ; 0.31 V                              ; 0.241 V                             ; 5.06e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; piezo_n       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.54e-08 V                   ; 3.16 V              ; -0.11 V             ; 0.302 V                              ; 0.22 V                               ; 4.82e-10 s                  ; 4.27e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.54e-08 V                  ; 3.16 V             ; -0.11 V            ; 0.302 V                             ; 0.22 V                              ; 4.82e-10 s                 ; 4.27e-10 s                 ; Yes                       ; No                        ;
+; LED[0]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.24e-08 V                   ; 3.14 V              ; -0.115 V            ; 0.31 V                               ; 0.241 V                              ; 5.06e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.24e-08 V                  ; 3.14 V             ; -0.115 V           ; 0.31 V                              ; 0.241 V                             ; 5.06e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; LED[1]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.24e-08 V                   ; 3.14 V              ; -0.115 V            ; 0.31 V                               ; 0.241 V                              ; 5.06e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.24e-08 V                  ; 3.14 V             ; -0.115 V           ; 0.31 V                              ; 0.241 V                             ; 5.06e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; LED[2]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.24e-08 V                   ; 3.14 V              ; -0.115 V            ; 0.31 V                               ; 0.241 V                              ; 5.06e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.24e-08 V                  ; 3.14 V             ; -0.115 V           ; 0.31 V                              ; 0.241 V                             ; 5.06e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; LED[3]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.24e-08 V                   ; 3.14 V              ; -0.115 V            ; 0.31 V                               ; 0.241 V                              ; 5.06e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.24e-08 V                  ; 3.14 V             ; -0.115 V           ; 0.31 V                              ; 0.241 V                             ; 5.06e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; LED[4]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.54e-08 V                   ; 3.14 V              ; -0.074 V            ; 0.343 V                              ; 0.194 V                              ; 7.35e-10 s                  ; 6.36e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 1.54e-08 V                  ; 3.14 V             ; -0.074 V           ; 0.343 V                             ; 0.194 V                             ; 7.35e-10 s                 ; 6.36e-10 s                 ; No                        ; No                        ;
+; LED[5]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.54e-08 V                   ; 3.09 V              ; -0.0119 V           ; 0.277 V                              ; 0.297 V                              ; 4.54e-09 s                  ; 3.32e-09 s                  ; No                         ; No                         ; 3.08 V                      ; 1.54e-08 V                  ; 3.09 V             ; -0.0119 V          ; 0.277 V                             ; 0.297 V                             ; 4.54e-09 s                 ; 3.32e-09 s                 ; No                        ; No                        ;
+; LED[6]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.54e-08 V                   ; 3.16 V              ; -0.11 V             ; 0.302 V                              ; 0.22 V                               ; 4.82e-10 s                  ; 4.27e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.54e-08 V                  ; 3.16 V             ; -0.11 V            ; 0.302 V                             ; 0.22 V                              ; 4.82e-10 s                 ; 4.27e-10 s                 ; Yes                       ; No                        ;
+; LED[7]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.54e-08 V                   ; 3.09 V              ; -0.0119 V           ; 0.277 V                              ; 0.297 V                              ; 4.54e-09 s                  ; 3.32e-09 s                  ; No                         ; No                         ; 3.08 V                      ; 1.54e-08 V                  ; 3.09 V             ; -0.0119 V          ; 0.277 V                             ; 0.297 V                             ; 4.54e-09 s                 ; 3.32e-09 s                 ; No                        ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.05e-09 V                   ; 3.21 V              ; -0.181 V            ; 0.16 V                               ; 0.253 V                              ; 2.77e-10 s                  ; 2.32e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.05e-09 V                  ; 3.21 V             ; -0.181 V           ; 0.16 V                              ; 0.253 V                             ; 2.77e-10 s                 ; 2.32e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; piezo         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.99e-06 V                   ; 3.11 V              ; -0.0717 V           ; 0.209 V                              ; 0.168 V                              ; 6.66e-10 s                  ; 6.19e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.99e-06 V                  ; 3.11 V             ; -0.0717 V          ; 0.209 V                             ; 0.168 V                             ; 6.66e-10 s                 ; 6.19e-10 s                 ; Yes                       ; No                        ;
+; piezo_n       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-06 V                      ; 3.13 V              ; -0.0781 V           ; 0.202 V                              ; 0.359 V                              ; 6.54e-10 s                  ; 5e-10 s                     ; No                         ; No                         ; 3.08 V                      ; 2e-06 V                     ; 3.13 V             ; -0.0781 V          ; 0.202 V                             ; 0.359 V                             ; 6.54e-10 s                 ; 5e-10 s                    ; No                        ; No                        ;
+; LED[0]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.99e-06 V                   ; 3.11 V              ; -0.0717 V           ; 0.209 V                              ; 0.168 V                              ; 6.66e-10 s                  ; 6.19e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.99e-06 V                  ; 3.11 V             ; -0.0717 V          ; 0.209 V                             ; 0.168 V                             ; 6.66e-10 s                 ; 6.19e-10 s                 ; Yes                       ; No                        ;
+; LED[1]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.99e-06 V                   ; 3.11 V              ; -0.0717 V           ; 0.209 V                              ; 0.168 V                              ; 6.66e-10 s                  ; 6.19e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.99e-06 V                  ; 3.11 V             ; -0.0717 V          ; 0.209 V                             ; 0.168 V                             ; 6.66e-10 s                 ; 6.19e-10 s                 ; Yes                       ; No                        ;
+; LED[2]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.99e-06 V                   ; 3.11 V              ; -0.0717 V           ; 0.209 V                              ; 0.168 V                              ; 6.66e-10 s                  ; 6.19e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.99e-06 V                  ; 3.11 V             ; -0.0717 V          ; 0.209 V                             ; 0.168 V                             ; 6.66e-10 s                 ; 6.19e-10 s                 ; Yes                       ; No                        ;
+; LED[3]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.99e-06 V                   ; 3.11 V              ; -0.0717 V           ; 0.209 V                              ; 0.168 V                              ; 6.66e-10 s                  ; 6.19e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.99e-06 V                  ; 3.11 V             ; -0.0717 V          ; 0.209 V                             ; 0.168 V                             ; 6.66e-10 s                 ; 6.19e-10 s                 ; Yes                       ; No                        ;
+; LED[4]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-06 V                      ; 3.12 V              ; -0.0547 V           ; 0.276 V                              ; 0.181 V                              ; 9.17e-10 s                  ; 8.31e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2e-06 V                     ; 3.12 V             ; -0.0547 V          ; 0.276 V                             ; 0.181 V                             ; 9.17e-10 s                 ; 8.31e-10 s                 ; Yes                       ; No                        ;
+; LED[5]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-06 V                      ; 3.08 V              ; -0.00666 V          ; 0.298 V                              ; 0.277 V                              ; 5.29e-09 s                  ; 4.2e-09 s                   ; Yes                        ; No                         ; 3.08 V                      ; 2e-06 V                     ; 3.08 V             ; -0.00666 V         ; 0.298 V                             ; 0.277 V                             ; 5.29e-09 s                 ; 4.2e-09 s                  ; Yes                       ; No                        ;
+; LED[6]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-06 V                      ; 3.13 V              ; -0.0781 V           ; 0.202 V                              ; 0.359 V                              ; 6.54e-10 s                  ; 5e-10 s                     ; No                         ; No                         ; 3.08 V                      ; 2e-06 V                     ; 3.13 V             ; -0.0781 V          ; 0.202 V                             ; 0.359 V                             ; 6.54e-10 s                 ; 5e-10 s                    ; No                        ; No                        ;
+; LED[7]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-06 V                      ; 3.08 V              ; -0.00666 V          ; 0.298 V                              ; 0.277 V                              ; 5.29e-09 s                  ; 4.2e-09 s                   ; Yes                        ; No                         ; 3.08 V                      ; 2e-06 V                     ; 3.08 V             ; -0.00666 V         ; 0.298 V                             ; 0.277 V                             ; 5.29e-09 s                 ; 4.2e-09 s                  ; Yes                       ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.02e-06 V                   ; 3.14 V              ; -0.123 V            ; 0.134 V                              ; 0.323 V                              ; 3.02e-10 s                  ; 2.85e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.02e-06 V                  ; 3.14 V             ; -0.123 V           ; 0.134 V                             ; 0.323 V                             ; 3.02e-10 s                 ; 2.85e-10 s                 ; Yes                       ; No                        ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; piezo         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; piezo_n       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.6 V               ; -0.127 V            ; 0.302 V                              ; 0.21 V                               ; 4.55e-10 s                  ; 4.11e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.6 V              ; -0.127 V           ; 0.302 V                             ; 0.21 V                              ; 4.55e-10 s                 ; 4.11e-10 s                 ; No                        ; No                        ;
+; LED[0]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; LED[1]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; LED[2]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; LED[3]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; LED[4]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.57 V              ; -0.0855 V           ; 0.315 V                              ; 0.175 V                              ; 6.79e-10 s                  ; 6.15e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.57 V             ; -0.0855 V          ; 0.315 V                             ; 0.175 V                             ; 6.79e-10 s                 ; 6.15e-10 s                 ; No                        ; No                        ;
+; LED[5]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.48 V              ; -0.0162 V           ; 0.354 V                              ; 0.317 V                              ; 3.88e-09 s                  ; 3.06e-09 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.48 V             ; -0.0162 V          ; 0.354 V                             ; 0.317 V                             ; 3.88e-09 s                 ; 3.06e-09 s                 ; No                        ; No                        ;
+; LED[6]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.6 V               ; -0.127 V            ; 0.302 V                              ; 0.21 V                               ; 4.55e-10 s                  ; 4.11e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.6 V              ; -0.127 V           ; 0.302 V                             ; 0.21 V                              ; 4.55e-10 s                 ; 4.11e-10 s                 ; No                        ; No                        ;
+; LED[7]        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.48 V              ; -0.0162 V           ; 0.354 V                              ; 0.317 V                              ; 3.88e-09 s                  ; 3.06e-09 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.48 V             ; -0.0162 V          ; 0.354 V                             ; 0.317 V                             ; 3.88e-09 s                 ; 3.06e-09 s                 ; No                        ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 6.54e-08 V                   ; 3.66 V              ; -0.26 V             ; 0.41 V                               ; 0.32 V                               ; 1.57e-10 s                  ; 2.15e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 6.54e-08 V                  ; 3.66 V             ; -0.26 V            ; 0.41 V                              ; 0.32 V                              ; 1.57e-10 s                 ; 2.15e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 6250     ; 90       ; 0        ; 1        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 6250     ; 90       ; 0        ; 1        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 101   ; 101  ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 21    ; 21   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; RST_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; batt_low   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; en_steer   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; too_fast   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LED[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; piezo       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; RST_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; batt_low   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; en_steer   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; too_fast   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LED[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; piezo       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+    Info: Processing started: Fri Nov 13 00:07:28 2026
+Info: Command: quartus_sta piezoTest -c piezoTest
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'piezoTest.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.373
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.373            -224.565 clk 
+Info (332146): Worst-case hold slack is 0.343
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.343               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -85.000 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.921
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.921            -192.782 clk 
+Info (332146): Worst-case hold slack is 0.298
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.298               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -85.000 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.477
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.477             -93.270 clk 
+Info (332146): Worst-case hold slack is 0.178
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.178               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -109.019 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4925 megabytes
+    Info: Processing ended: Fri Nov 13 00:07:30 2026
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

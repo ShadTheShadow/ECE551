@@ -4,67 +4,400 @@
 # 3 compiles, 0 failed with no errors.
 vsim -gui work.piezo_drv_tb
 # vsim -gui work.piezo_drv_tb 
-# Start time: 10:09:52 on Nov 06,2026
+# Start time: 22:48:44 on Nov 12,2026
 # Loading sv_std.std
 # Loading work.piezo_drv_tb
 # Loading work.piezo_drv
+# ** Error: (vsim-3063) Port 'rst_n' not found in the connected module (5th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /piezo_drv_tb/iDUT File: C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex19/piezo_drv_tb.sv Line: 11
+# Error loading design
+# End time: 22:48:44 on Nov 12,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 5
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.piezo_drv_tb
+# vsim -gui work.piezo_drv_tb 
+# Start time: 22:49:54 on Nov 12,2026
+# Loading sv_std.std
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/piezo_drv_tb/iDUT/*
+vsim -gui work.piezo_drv_tb
+# End time: 22:50:17 on Nov 12,2026, Elapsed time: 0:00:23
+# Errors: 0, Warnings: 2
+# vsim -gui work.piezo_drv_tb 
+# Start time: 22:50:17 on Nov 12,2026
+# Loading sv_std.std
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+# WARNING: No extended dataflow license exists
 add wave -position insertpoint sim:/piezo_drv_tb/iDUT/*
 run -all
 # Compile of piezo_drv.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.piezo_drv
-run -all
-restart -f
-run -all
-# Compile of piezo_drv_tb.sv failed with 2 errors.
-# Compile of piezo_drv_tb.sv failed with 2 errors.
-# Compile of piezo_drv_tb.sv failed with 2 errors.
 # Compile of piezo_drv_tb.sv was successful.
-restart -f
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.piezo_drv_tb
+# End time: 22:52:12 on Nov 12,2026, Elapsed time: 0:01:55
+# Errors: 0, Warnings: 2
+# vsim -gui work.piezo_drv_tb 
+# Start time: 22:52:12 on Nov 12,2026
+# Loading sv_std.std
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/piezo_drv_tb/iDUT/*
+run -all
+run -all
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.piezo_drv_tb
+# Loading work.piezo_drv
 run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv.sv failed with 3 errors.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 1 failed with 3 errors.
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position insertpoint sim:/piezo_drv_tb/iDUT/*
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position insertpoint sim:/piezo_drv_tb/iDUT/*
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv.sv was successful.
 # Compile of piezo_drv_tb.sv failed with 1 errors.
-# Compile of piezo_drv_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.piezo_drv_tb
-run -all
-# Compile of piezo_drv.sv failed with 1 errors.
-# Compile of piezo_drv_tb.sv was successful.
-# 2 compiles, 1 failed with 1 error.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 1 failed with 1 error.
 # Compile of piezo_drv.sv was successful.
-restart -f
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.piezo_drv_tb
 # Loading work.piezo_drv
 run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv failed with 2 errors.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 1 failed with 2 errors.
 # Compile of piezo_drv.sv was successful.
 # Compile of piezo_drv_tb.sv was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.piezo_drv_tb
 # Loading work.piezo_drv
 run -all
-# Compile of piezo_drv_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.piezo_drv_tb
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 run -all
-restart -f
-run -all
-# Compile of piezo_drv_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.piezo_drv_tb
 run -all
 # Compile of piezo_drv.sv was successful.
-restart -f
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
 # Loading work.piezo_drv
-# ** Error: (vsim-3063) Port 'rst_n' not found in the connected module (5th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /piezo_drv_tb/iDUT File: C:/Users/evant/Documents/ECE551/Ex19/piezo_drv_tb.sv Line: 11
-# End time: 11:01:46 on Nov 06,2026, Elapsed time: 0:51:54
-# Errors: 1, Warnings: 1
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of piezo_drv_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Compile of piezo_drv.sv was successful with warnings.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of piezoTest.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.piezo_drv_tb
+# Loading work.piezo_drv
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 

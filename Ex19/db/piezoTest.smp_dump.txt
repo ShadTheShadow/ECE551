@@ -1,0 +1,11 @@
+
+State Machine - |piezoTest|piezo_drv:iDUT|state
+Name state.NOTE6 state.NOTE5 state.NOTE4 state.NOTE3 state.NOTE2 state.NOTE1 state.WAIT_3 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 
+state.WAIT_3 0 0 0 0 0 0 1 1 
+state.NOTE1 0 0 0 0 0 1 0 1 
+state.NOTE2 0 0 0 0 1 0 0 1 
+state.NOTE3 0 0 0 1 0 0 0 1 
+state.NOTE4 0 0 1 0 0 0 0 1 
+state.NOTE5 0 1 0 0 0 0 0 1 
+state.NOTE6 1 0 0 0 0 0 0 1 

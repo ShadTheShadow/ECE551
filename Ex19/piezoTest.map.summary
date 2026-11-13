@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 13 00:07:16 2026
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : piezoTest
+Top-level Entity Name : piezoTest
+Family : Cyclone IV E
+Total logic elements : 201
+    Total combinational functions : 200
+    Dedicated logic registers : 82
+Total registers : 82
+Total pins : 15
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
