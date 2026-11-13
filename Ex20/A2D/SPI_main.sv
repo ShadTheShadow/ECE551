@@ -167,6 +167,7 @@ always_comb begin
     shft = 0;
     ld_SCLK = 0;
     init = 0;
+    nxt_state = TRANSMIT;
 
     case (state)
 

@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at SPI_main.sv(25): object "init" differs only in case from object "INIT" in the same scope File: C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/SPI_main.sv Line: 25
+Info (10281): Verilog HDL Declaration information at rst_synch.sv(3): object "RST_n" differs only in case from object "rst_n" in the same scope File: C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/rst_synch.sv Line: 3
+Info (10281): Verilog HDL Declaration information at A2D_test.sv(3): object "RST_n" differs only in case from object "rst_n" in the same scope File: C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_test.sv Line: 3
+Info (10281): Verilog HDL Declaration information at A2D_intf.sv(63): object "channel" differs only in case from object "CHANNEL" in the same scope File: C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_intf.sv Line: 63

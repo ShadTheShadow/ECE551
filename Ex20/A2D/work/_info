@@ -11,7 +11,7 @@ cModel Technology
 dC:/intelFPGA/20.1
 vA2D_Intf
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1794456813
+!s110 1794541972
 !i10b 1
 !s100 P2jN2V]?zAYE];V3ke2gB1
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -22,13 +22,13 @@ Z3 dC:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D
 w1794456627
 8C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_Intf.sv
 FC:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_Intf.sv
-!i122 288
+!i122 300
 L0 3 220
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1794456813.000000
+Z5 !s108 1794541972.000000
 !s107 C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_Intf.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_Intf.sv|
 !i113 1
@@ -37,7 +37,7 @@ Z7 tCvgOpt 0
 n@a2@d_@intf
 vA2D_tb
 R0
-Z8 !s110 1794456814
+Z8 !s110 1794541973
 !i10b 1
 !s100 2EWgD2D3FZ?EcB3599CJn1
 R1
@@ -48,7 +48,7 @@ R3
 w1794447058
 8C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_tb.sv
 FC:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_tb.sv
-!i122 289
+!i122 301
 L0 1 53
 R4
 r1
@@ -65,22 +65,22 @@ vA2D_test
 R0
 R8
 !i10b 1
-!s100 FZ;QV6S62d0V[oY4LS0Tf3
+!s100 >_]A^4:eK^dH[?P=o^Zab3
 R1
-I1eoJLhhT9KBUHAEZYiVhI3
+IAa>iD2H_8dj<SknbPGka81
 R2
 S1
 R3
-Z9 w1794413251
+w1794457375
 8C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_test.sv
 FC:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_test.sv
-!i122 290
-L0 1 54
+!i122 302
+L0 1 111
 R4
 r1
 !s85 0
 31
-Z10 !s108 1794456814.000000
+Z9 !s108 1794541973.000000
 !s107 C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_test.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/A2D_test.sv|
 !i113 1
@@ -97,16 +97,16 @@ IZzFKc6Q>?^TeB6e_QIzlQ1
 R2
 S1
 R3
-R9
+Z10 w1794413251
 8C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/ADC128S.sv
 FC:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/ADC128S.sv
-!i122 291
+!i122 303
 L0 1 108
 R4
 r1
 !s85 0
 31
-R10
+R9
 !s107 C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/ADC128S.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/ADC128S.sv|
 !i113 1
@@ -123,16 +123,16 @@ IU^;h`NoYRF4fo_9df9I:Z0
 R2
 S1
 R3
-R9
+R10
 8C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/SPI_ADC128S.sv
 FC:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/SPI_ADC128S.sv
-!i122 292
+!i122 304
 L0 1 140
 R4
 r1
 !s85 0
 31
-R10
+R9
 !s107 C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/SPI_ADC128S.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/SPI_ADC128S.sv|
 !i113 1
@@ -152,13 +152,13 @@ R3
 w1794456807
 8C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/SPI_main.sv
 FC:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/SPI_main.sv
-!i122 293
+!i122 305
 L0 1 286
 R4
 r1
 !s85 0
 31
-R10
+R9
 !s107 C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/SPI_main.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/crush/Documents/Projects/ECE551/Repo/ECE551/Ex20/A2D/SPI_main.sv|
 !i113 1
