@@ -42,3 +42,29 @@ run -all
 #    Time: 717495 ps  Iteration: 1  Instance: /mtr_drv_tb
 # Break in Module mtr_drv_tb at C:/Users/evant/ECE551/Ex21/mtr_drv_tb.sv line 44
 # WARNING: No extended dataflow license exists
+# Compile of mtr_drv_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.mtr_drv_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# FAILED: OVR_I_shtdwn should be asserted when OVR_I.. asserted outside of window
+# ** Note: $stop    : C:/Users/evant/ECE551/Ex21/mtr_drv_tb.sv(96)
+#    Time: 2834670 ps  Iteration: 1  Instance: /mtr_drv_tb
+# Break in Module mtr_drv_tb at C:/Users/evant/ECE551/Ex21/mtr_drv_tb.sv line 96
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of mtr_drv_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.mtr_drv_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# YAHOO! All tests passed!
+# ** Note: $stop    : C:/Users/evant/ECE551/Ex21/mtr_drv_tb.sv(100)
+#    Time: 3653870 ps  Iteration: 1  Instance: /mtr_drv_tb
+# Break in Module mtr_drv_tb at C:/Users/evant/ECE551/Ex21/mtr_drv_tb.sv line 100

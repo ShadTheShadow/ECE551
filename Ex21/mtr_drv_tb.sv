@@ -37,7 +37,7 @@ module mtr_drv_tb();
             //Assert OVR_I_lft inside window
             OVR_I_lft = 1'b1;
             repeat(3) @(posedge clk);
-            OVR_I_lft = 1'b1;
+            OVR_I_lft = 1'b0;
 
             if (OVR_I_shtdwn !== 1'b0) begin
                 $display("FAILED: OVR_I_shtdwn asserted in lft blanking window");
@@ -59,7 +59,7 @@ module mtr_drv_tb();
             //Assert OVR_I_rght inside window
             OVR_I_rght = 1'b1;
             repeat(3) @(posedge clk);
-            OVR_I_rght = 1'b1;
+            OVR_I_rght = 1'b0;
 
             if (OVR_I_shtdwn !== 1'b0) begin
                 $display("FAILED: OVR_I_shtdwn asserted in rght blanking window");
@@ -70,7 +70,7 @@ module mtr_drv_tb();
         @(posedge iDUT.PWM_synch);
         @(negedge clk);
 
-        for (int i = 0; i < 45; i++) begin
+        for (int i = 0; i < 85; i++) begin
             
             @(posedge iDUT.PWM_synch);
 
