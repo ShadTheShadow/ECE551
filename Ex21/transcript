@@ -1,0 +1,44 @@
+# Compile of mtr_drv.sv was successful.
+# Compile of mtr_drv_tb.sv failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of mtr_drv_tb.sv failed with 1 errors.
+# Compile of mtr_drv_tb.sv was successful.
+vsim -gui work.mtr_drv_tb
+# vsim -gui work.mtr_drv_tb 
+# Start time: 10:00:04 on Nov 18,2026
+# Loading sv_std.std
+# Loading work.mtr_drv_tb
+# Loading work.mtr_drv
+# ** Error: (vsim-3033) Instantiation of 'PWM11' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /mtr_drv_tb/iDUT File: C:/Users/evant/ECE551/Ex21/mtr_drv.sv Line: 58
+#         Searched libraries:
+#             C:/Users/evant/ECE551/Ex21/work
+# ** Error: (vsim-3033) Instantiation of 'PWM11' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /mtr_drv_tb/iDUT File: C:/Users/evant/ECE551/Ex21/mtr_drv.sv Line: 60
+#         Searched libraries:
+#             C:/Users/evant/ECE551/Ex21/work
+# Error loading design
+# End time: 10:00:05 on Nov 18,2026, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 7
+# Compile of PWM11.sv was successful.
+vsim -gui work.mtr_drv_tb
+# vsim -gui work.mtr_drv_tb 
+# Start time: 10:01:07 on Nov 18,2026
+# Loading sv_std.std
+# Loading work.mtr_drv_tb
+# Loading work.mtr_drv
+# Loading work.PWM11
+run -all
+# FAILED: OVR_I_shtdwn asserted in lft blanking window
+# ** Note: $stop    : C:/Users/evant/ECE551/Ex21/mtr_drv_tb.sv(44)
+#    Time: 717495 ps  Iteration: 1  Instance: /mtr_drv_tb
+# Break in Module mtr_drv_tb at C:/Users/evant/ECE551/Ex21/mtr_drv_tb.sv line 44
+add wave -position insertpoint sim:/mtr_drv_tb/iDUT/*
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# FAILED: OVR_I_shtdwn asserted in lft blanking window
+# ** Note: $stop    : C:/Users/evant/ECE551/Ex21/mtr_drv_tb.sv(44)
+#    Time: 717495 ps  Iteration: 1  Instance: /mtr_drv_tb
+# Break in Module mtr_drv_tb at C:/Users/evant/ECE551/Ex21/mtr_drv_tb.sv line 44
+# WARNING: No extended dataflow license exists
