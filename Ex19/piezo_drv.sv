@@ -493,7 +493,7 @@ assign tmr_3sec_done = ~(|tmr_3sec); // All bits 0
 
 //assign ld_note = ~(|note_dur_tmr); // Load new note when dur timer is 0
 
-assign piezo = (note_freq_tmr > 25000);
+assign piezo = (note_freq_tmr[25]);
 assign piezo_n = ~piezo;
 
 endmodule
