@@ -38,7 +38,6 @@ module A2D_test(clk,RST_n,SEL,LED,SCLK,SS_n,MOSI,MISO);
       else begin
           //Assert full and loop back
           if (bit_cnt == {19{1'b1}}) begin
-              full <= 1'b1;
               bit_cnt <= 19'd0;
           end
           //Update normally
@@ -47,6 +46,8 @@ module A2D_test(clk,RST_n,SEL,LED,SCLK,SS_n,MOSI,MISO);
           end
       end
   end
+
+  assign full = &bit_cnt;
   
   ////////////////////////////////////////////////////////////////
   // Infer 2-bit counter to select which output to map to LEDs //
@@ -94,7 +95,7 @@ module A2D_test(clk,RST_n,SEL,LED,SCLK,SS_n,MOSI,MISO);
   //////////////////////
   // Instantiate DUT //
   ////////////////////  
-  A2D_Intf iDUT(.clk(clk),.rst_n(rst_n),.nxt(nxt),.lft_ld(lft_ld),
+  A2D_Intf iDUT(.clk(clk),.rst_n(rst_n),.nxt(full),.lft_ld(lft_ld),
                 .rght_ld(rght_ld),.steer_pot(steer_pot),.batt(batt),
 				.SS_n(SS_n),.SCLK(SCLK),.MOSI(MOSI),.MISO(MISO));
 			   

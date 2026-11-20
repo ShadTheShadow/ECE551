@@ -68,3 +68,5 @@ run -all
 # ** Note: $stop    : C:/Users/evant/ECE551/Ex21/mtr_drv_tb.sv(100)
 #    Time: 3653870 ps  Iteration: 1  Instance: /mtr_drv_tb
 # Break in Module mtr_drv_tb at C:/Users/evant/ECE551/Ex21/mtr_drv_tb.sv line 100
+# End time: 12:48:21 on Nov 18,2026, Elapsed time: 2:47:14
+# Errors: 0, Warnings: 1
