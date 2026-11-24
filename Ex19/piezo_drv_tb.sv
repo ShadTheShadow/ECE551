@@ -1,3 +1,5 @@
+`timescale 1us/1ns
+
 module piezo_drv_tb();
 
 logic batt_low;
@@ -26,48 +28,48 @@ initial begin
     @(posedge clk);
 
     rst_n = 1;
-    batt_low = 1;
-    too_fast = 1;
-    en_steer = 1;
-
-    #1000000;
+//    batt_low = 0;
+//    too_fast = 0;
+//    en_steer = 1;
+//
+//    #1000000;
+//
+//    batt_low = 0;
+//    too_fast = 0;
+//    en_steer = 0;
+//
+//    #1000000;
+//
+//    batt_low = 0;
+//    too_fast = 0;
+//    en_steer = 1;
+//
+//    #1000000;
+//
+//    batt_low = 0;
+//    too_fast = 0;
+//    en_steer = 0;
+//
+//    #1000000;
+//
+//    batt_low = 1;
+//    too_fast = 0;
+//    en_steer = 1;
+//
+//    #1000000;
+//
+//    batt_low = 0;
+//    too_fast = 0;
+//    en_steer = 0;
+//
+//    #1000000;
 
     batt_low = 0;
     too_fast = 0;
-    en_steer = 0;
-
-    #1000000;
-
-    batt_low = 0;
-    too_fast = 0;
-    en_steer = 1;
-
-    #1000000;
-
-    batt_low = 0;
-    too_fast = 0;
-    en_steer = 0;
-
-    #1000000;
-
-    batt_low = 1;
-    too_fast = 0;
-    en_steer = 1;
-
-    #1000000;
-
-    batt_low = 0;
-    too_fast = 0;
-    en_steer = 0;
-
-    #1000000;
-
-    batt_low = 0;
-    too_fast = 1;
     en_steer = 1;
 
 end
 
-always #1 clk <= ~clk; // 50 MHz
+always #0.01 clk <= ~clk; // 50 MHz @ ns timestep
 
 endmodule

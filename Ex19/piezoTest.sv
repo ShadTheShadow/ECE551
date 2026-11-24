@@ -1,13 +1,15 @@
+`default_nettype none
+
 module piezoTest(clk,RST_n,en_steer,too_fast,batt_low,piezo,
                  piezo_n,LED);
 
-input clk,RST_n;
-input en_steer;		// play Charge Fanfare every 3 seconds
-input too_fast; 	// play 1st 3 of Charge Fanfare continuously
-input batt_low;		// play Charge Fanfare backwards
-output piezo;		// drives piezo
-output piezo_n;		// drive is differential to increase volume
-output [7:0] LED;	
+input logic clk,RST_n;
+input logic en_steer;		// play Charge Fanfare every 3 seconds
+input logic too_fast; 	// play 1st 3 of Charge Fanfare continuously
+input logic batt_low;		// play Charge Fanfare backwards
+output logic piezo;		// drives piezo
+output logic piezo_n;		// drive is differential to increase volume
+output logic [7:0] LED;	
 
 wire rst_n;
 

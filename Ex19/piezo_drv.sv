@@ -39,8 +39,8 @@ module piezo_drv
     reg ld_note;
 
     // Signal Definitions
-    reg [23:0] note_dur_tmr;
-    wire [23:0] note_dur_nxt;
+    reg [24:0] note_dur_tmr;
+    wire [24:0] note_dur_nxt;
     wire note_dur_done;
 
     reg [25:0] note_freq_tmr;
@@ -49,8 +49,8 @@ module piezo_drv
     reg [17:0] curr_note_freq;
     wire [17:0] nxt_note_freq;  
 
-    reg [23:0] tmr_3sec;
-    wire [23:0] tmr_3sec_nxt;
+    reg [27:0] tmr_3sec;
+    wire [27:0] tmr_3sec_nxt;
     wire tmr_3sec_done;
 
     //State control
@@ -66,13 +66,13 @@ module piezo_drv
     localparam E7 = 18'd2637; // 2637 Hz = 19 Clock Cycles @ 50MHz
     localparam G7 = 18'd3136; // 3136 Hz = 16 Clock Cycles @ 50 MHz
 
-    localparam EIGHTH =     {4'b0100, {20{1'b0}}}; // 2^23
-    localparam DOTTED =     {4'b0110, {20{1'b0}}}; // 2^23 + 2^22
-    localparam SIXTEENTH =  {4'b0010, {20{1'b0}}}; // 2^22
-    localparam HALF =       {4'b1000, {20{1'b0}}}; // 2^24
+    localparam EIGHTH =     25'b1 << 23; // 2^23
+    localparam DOTTED =     (25'b11 << 22); // 2^23 + 2^22
+    localparam SIXTEENTH =  25'b1 << 22; // 2^22
+    localparam HALF =       25'b1 << 24; // 2^24
 
-    reg [17:0] note_freq; // TODO FIND BITWIDTH
-    reg [23:0] note_dur;
+    reg [17:0] note_freq;
+    reg [24:0] note_dur;
 
     logic ld_tmr;
 
@@ -260,6 +260,7 @@ module piezo_drv
                     note_freq = G7;
                     note_dur = DOTTED;
                     ld_note = 1;
+
                     nxt_state = NOTE4;
                     
                 end else begin
@@ -369,14 +370,14 @@ module piezo_drv
 
 // FPGA is 50 mhz
 
-localparam TMR_3SEC = 18'd150000000; // 50MHz * 3 for 3 seconds
+localparam TMR_3SEC = 28'd150000000; // 50MHz * 3 for 3 seconds
 localparam FPGA_FREQ = 50000000; // 50MHZ
 
 generate
 
     if (FAST_SIM) begin
 
-        wire [23:0] note_dur_scaled = (note_dur / 64);
+        wire [24:0] note_dur_scaled = (note_dur / 64);
 
         assign note_dur_nxt = (ld_note) ? note_dur_scaled : (|note_dur_tmr) ? note_dur_tmr - 1 : 0;
 
@@ -477,7 +478,7 @@ generate
 
     if (FAST_SIM) begin
 
-        wire [23:0] ld_tmr_3sec_scaled = (TMR_3SEC / 6);
+        wire [27:0] ld_tmr_3sec_scaled = (TMR_3SEC / 64);
 
         assign tmr_3sec_nxt = (ld_tmr) ? ld_tmr_3sec_scaled : (|tmr_3sec) ? tmr_3sec - 1 : 0;
 
